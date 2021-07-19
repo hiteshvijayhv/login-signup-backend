@@ -19,4 +19,8 @@ app.use(express.json())
 app.use('/api/user', authRoute)
 app.use('/api/loggedin', loggedin)
 
+app.get('/', (req, res) => {
+    res.send('server working')
+})
+
 app.listen(8000, () => console.log('Running on port 3000'))
